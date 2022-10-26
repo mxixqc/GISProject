@@ -1,0 +1,30 @@
+---
+title: "Proposal"
+editor: visual
+---
+
+### Topic:
+
+------------------------------------------------------------------------
+
+<div>
+
+Impact of closures or mergers of education institutions on equity of access.
+
+</div>
+
+### Our Motivation
+
+------------------------------------------------------------------------
+
+::: {#motivation-text}
+The merging of 2 schools is not always a happy occasion for many students. For some students, they often end up travelling for longer hours, leading to less time to relax and enjoy.
+
+As SMU students, we wanted to explore the impact of the merger of educational institutions (i.e Primary and Secondary schools) to find out whether it is easier for students to access their schools after a merger.
+
+Through our findings, we hope to provide recommendations on how the merger of schools can be improved in terms of ease of access, for students. We do this in the hopes of making their commute a more pleasant experience.
+:::
+
+### Scope of Work
+
+------------------------------------------------------------------------

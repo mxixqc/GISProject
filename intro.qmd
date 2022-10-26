@@ -15,10 +15,10 @@ editor: visual
 4.  Chicken
 5.  Rice
 
-#### Here is the data: 
+#### Here is the data:
 
 1.  URA MP19 Subzone Boundary
 
-### To Compile Data: 
+### To Compile Data:
 
 -   

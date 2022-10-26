@@ -5,19 +5,19 @@ website:
   title: "GISProject"
   navbar:
     left: 
-      - href: intro.qmd
-        text: introduction
-      - href: method.qmd
-        text: methodology
-      - href: results.qmd
-        text: results
+      - href: proposal.qmd
+        text: Proposal
+  #    - href: method.qmd
+  #      text: methodology
+   #   - href: results.qmd
+   #     text: results
     right:
       - href: index.qmd
         text: Home
-      - about.qmd
+    #  - href: about.qmd
 format:
   html:
-    theme: cosmo
+    theme: cosmos
     css: styles.css
     toc: true
 

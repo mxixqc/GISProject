@@ -1,13 +1,9 @@
 ---
-title: "GIS Project"
+title: "G1T4: Travel So Long for What!"
 ---
 
-This is a Quarto website.
+Welcome to our GIS Project Website!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+We are a group for students taking SMT201. We wanted to explore the impacts of the merger of Singaporean educational institutes on students travel times.
 
-```{r}
-1 + 1 * 200 / 3 
-```
-
-Welcome to our GIS Project Website
+Come take a look!
