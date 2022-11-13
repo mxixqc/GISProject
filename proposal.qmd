@@ -28,3 +28,15 @@ Through our findings, we hope to provide recommendations on how the merger of sc
 ### Scope of Work
 
 ------------------------------------------------------------------------
+
+<div>
+
+Our team has decided to work on Primary schools in Singapore.
+
+</div>
+
+### Project Schedule
+
+------------------------------------------------------------------------
+
+![](Project%20Timeline.png)

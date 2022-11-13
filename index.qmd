@@ -6,4 +6,4 @@ Welcome to our GIS Project Website!
 
 We are a group for students taking SMT201. We wanted to explore the impacts of the merger of Singaporean educational institutes on students travel times.
 
-Come take a look!
+Come take a look at our [proposal](./proposal.html)!
