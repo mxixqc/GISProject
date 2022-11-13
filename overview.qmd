@@ -1,0 +1,17 @@
+---
+title: "Introduction"
+editor: visual
+---
+
+## Overview
+
+## Project Tasks
+
+#### The project Tasks are as follows:
+
+1.  Explore the available literature
+2.  Obtain Pre-Merger Data
+3.  Obtain Post-Merger Data
+4.  Understand the Impacts of Primary School Merger on Accessibility
+5.  Identify Top Affected Areas
+6.  Propose potential on how to minimize impacts

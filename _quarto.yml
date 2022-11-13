@@ -7,8 +7,8 @@ website:
     left: 
       - href: proposal.qmd
         text: Proposal
-  #    - href: method.qmd
-  #      text: methodology
+      - href: overview.qmd
+        text: Overview
    #   - href: results.qmd
    #     text: results
     right:
