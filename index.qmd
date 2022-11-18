@@ -4,6 +4,6 @@ title: "G1T4: Travel So Long for What!"
 
 Welcome to our GIS Project Website!
 
-We are a group for students taking SMT201. We wanted to explore the impacts of the merger of Singaporean educational institutes on students travel times.
+We are a group for students taking SMT201. We wanted to explore the impacts of the merger of Singaporean educational institutes on students travel times. Our focus will be on the merger of Primary Schools that happened in 2019.
 
 Come take a look at our [proposal](./proposal.html)!
