@@ -3,11 +3,23 @@ title: "G1T4: Travel So Long for What!"
 editor: visual
 ---
 
+This project is done under the module SMT201 Geographic Information Systems for Urban Planning by Professor Kam Tin Seong in Singapore Management University (SMU).
+
 ### Introduction
 
-There has been a decrease in birth rates in Singapore, hence leading to fewer numbers of enrollments for schools. In 2019, MOE conducted a merging exercise, where 14 primary schools were selected to merge based on enrollment trends, proximity to new sites and infrastructural capabilities of the receiving schools. 
+There has been a decrease in birth rates in Singapore, hence leading to fewer numbers of enrollments for schools. In 2019, MOE conducted a [merging exercise](https://www.moe.gov.sg/news/press-releases/20171229-names-of-primary-and-secondary-schools-merging-in-2019), where 7 pairs of primary schools and 3 pairs of secondary schools merged.
 
-In this project, we will be focusing on the mergers of primary schools in 2019. 
+These were some factors that were considered for the merger of schools:
+
+-   Schools' history and heritage
+
+-   enrollments
+
+-   stakeholders' interests
+
+-   sentiments of all schools involved
+
+In this project, we will be focusing on the Primary Schools that have been merged in 2019.
 
 Here are some information that we found interesting!
 

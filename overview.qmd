@@ -4,19 +4,25 @@ title: "Introduction"
 
 ## Overview
 
-There has been a decrease in birth rates in Singapore, hence leading to fewer numbers of enrollments for schools. In 2019, MOE conducted a [merging exercise](https://www.moe.gov.sg/news/press-releases/20171229-names-of-primary-and-secondary-schools-merging-in-2019), where 7 pairs of primary schools and 3 pairs of secondary schools.
+## Project Motivation
 
-These were some factors that were considered for the merger of schools:
+We are interested in how mergers of education institutions affect the equity of access. With the increasing ageing population and lower birthrates in Singapore, [more mergers of schools](https://www.moe.gov.sg/news/press-releases/20220406-names-of-primary-and-secondary-schools-merging-between-2022-and-2025) will be conducted between 2022 and 2025. This would directly affect the priority admission for [primary school registration exercises](https://www.moe.gov.sg/primary/p1-registration/distance) as it takes into account the distance between the school and the residential building. This distance would be a buffer of 1km - 2km of the school.
 
--   Schools' history and heritage
+In this project, we aim to focus on Primary Schools by analysing how the distance from a residential building to the nearest primary school has been affected. By scoping to primary schools, we plan to have an in-depth analysis on the impact of mergers on equity of access.
 
--   enrollments
+## Project Objectives
 
--   stakeholders' interests
+#### Objective 1
 
--   sentiments of all schools involved
+Understand the change in distance between residential buildings and primary schools before and after the mergers in 2019. This will be done using the following methods:
 
-In our project, we aim to focus on Primary Schools and how the distance from a residential building to the newly merged primary school had been affected.
+-   Analytical hexagons
+
+-   Distance matrix analysis using vector-based GIS
+
+#### Objective 2
+
+Understand future population changes in Singapore, which may be used for future primary school mergers. This will be done using the choropeth map to visualise the percentage change in population of primary school children by subzone from 2017 to 2017.
 
 ## Project Tasks
 
@@ -28,3 +34,9 @@ In our project, we aim to focus on Primary Schools and how the distance from a r
 4.  Understand the Impacts of Primary School Merger on Accessibility
 5.  Identify Top Affected Areas
 6.  Propose potential on how to minimize impacts
+
+## Data
+
+1.  [Geofabrik](https://download.geofabrik.de/asia/malaysia-singapore-brunei.html)
+2.  Singstat
+3.  [Data.gov.sg](https://data.gov.sg/dataset/school-directory-and-information)
