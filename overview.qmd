@@ -5,6 +5,20 @@ editor: visual
 
 ## Overview
 
+There has been a decrease in birth rates in Singapore, hence leading to fewer numbers of enrollments for schools. In 2019, MOE conducted a [merging exercise](https://www.moe.gov.sg/news/press-releases/20171229-names-of-primary-and-secondary-schools-merging-in-2019), where 7 pairs of primary schools and 3 pairs of secondary schools.
+
+These were some factors that were considered for the merger of schools:
+
+-   Schools' history and heritage
+
+-   enrollments
+
+-   stakeholders' interests
+
+-   sentiments of all schools involved
+
+In our project, we aim to focus on Primary Schools and how the distance from a residential building to the newly merged primary school had been affected.
+
 ## Project Tasks
 
 #### The project Tasks are as follows:
