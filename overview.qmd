@@ -1,6 +1,5 @@
 ---
 title: "Introduction"
-editor: visual
 ---
 
 ## Overview

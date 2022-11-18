@@ -1,9 +1,34 @@
 ---
 title: "G1T4: Travel So Long for What!"
+editor: visual
 ---
 
-Welcome to our GIS Project Website!
+### Introduction
 
-We are a group for students taking SMT201. We wanted to explore the impacts of the merger of Singaporean educational institutes on students travel times.
+There has been a decrease in birth rates in Singapore, hence leading to fewer numbers of enrollments for schools. In 2019, MOE conducted a merging exercise, where 14 primary schools were selected to merge based on enrollment trends, proximity to new sites and infrastructural capabilities of the receiving schools. 
+
+In this project, we will be focusing on the mergers of primary schools in 2019. 
+
+Here are some information that we found interesting!
+
+### Information on Primary School Merger and Priority Calculations
+
+------------------------------------------------------------------------
+
+[Address used for Registration](https://www.moe.gov.sg/primary/p1-registration/home-address)
+
+[Home School Distance calculation change](https://www.moe.gov.sg/primary/p1-registration/changes-to-p1-registration/what-the-change-in-home-school-distance-calculation-means-for-you)
+
+[Names of Primary and Secondary Schools Merging Between 2022 and 2025](https://www.moe.gov.sg/news/press-releases/20220406-names-of-primary-and-secondary-schools-merging-between-2022-and-2025)
+
+### Information on Upcoming Merger
+
+------------------------------------------------------------------------
+
+[8 primary and 10 secondary schools to merge](https://www.straitstimes.com/singapore/parenting-education/8-primary-and-10-secondary-schools-to-merge-over-next-three-years-amid-falling-birth-rates)
+
+[18 primary and secondary schools to undergo mergers](https://www.channelnewsasia.com/singapore/moe-schools-merging-new-town-tanglin-telok-kurau-201401)
+
+### Proposal
 
 Come take a look at our [proposal](./proposal.html)!
