@@ -15,7 +15,7 @@ website:
         text: GIS Report
     right:
       - href: about.qmd
-        text: About
+        text: About Us
 
 format:
   html:
