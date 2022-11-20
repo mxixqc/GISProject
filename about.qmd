@@ -1,17 +1,10 @@
 ---
-title: "About"
+title: "About our team"
 ---
 
-About our team
-
-------------------------------------------------------------------------
-
-Anna Tseng Year 3 School of Computing & Information Systems
-
-Michelle Lee Year 3 School of Computing & Information Systems
-
-Shaan Walia Year 3 School of Computing & Information Systems
-
-Here!
+|                Anna Tseng                 |                Shaan Walia                |               Michelle Lee                |
+|:-----------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|
+|                  Year 3                   |                  Year 3                   |                  Year 3                   |
+| School of Computing & Information Systems | School of Computing & Information Systems | School of Computing & Information Systems |
 
 ![](images/photo_2022-11-18%2016.57.28.jpeg)
