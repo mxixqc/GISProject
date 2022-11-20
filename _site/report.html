@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>GISProject – report</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">GISProject</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./overview.html">Overview</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./poster.html">Poster</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./report.html" aria-current="page">GIS Report</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">About</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#gis-report---impact-of-mergers-on-equity-of-distance" id="toc-gis-report---impact-of-mergers-on-equity-of-distance" class="nav-link active" data-scroll-target="#gis-report---impact-of-mergers-on-equity-of-distance">GIS Report - Impact of mergers on equity of distance</a>
+  <ul class="collapse">
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <ul class="collapse">
+  <li><a href="#analytical-hexagons" id="toc-analytical-hexagons" class="nav-link" data-scroll-target="#analytical-hexagons">Analytical Hexagons</a></li>
+  <li><a href="#distance-matrix-analysis-using-vector-based-gis" id="toc-distance-matrix-analysis-using-vector-based-gis" class="nav-link" data-scroll-target="#distance-matrix-analysis-using-vector-based-gis">Distance Matrix Analysis using Vector-based GIS</a></li>
+  <li><a href="#conclusion-and-future-work" id="toc-conclusion-and-future-work" class="nav-link" data-scroll-target="#conclusion-and-future-work">Conclusion and Future Work</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="gis-report---impact-of-mergers-on-equity-of-distance" class="level1">
+<h1>GIS Report - Impact of mergers on equity of distance</h1>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<ol type="1">
+<li><p>Analytical Hexagons</p></li>
+<li><p>Distance Matrix Analysis using Vector-based GIS</p></li>
+</ol>
+<section id="analytical-hexagons" class="level3">
+<h3 class="anchored" data-anchor-id="analytical-hexagons">Analytical Hexagons</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Grids.webp" class="img-fluid figure-img" width="634"></p>
+</figure>
+</div>
+<p>We designated 1000m x 1000m hexagons around Singapore to replicate the 1km radius around schools. We did this to mimic the priority area parents of incoming P1 students get when choosing their primary school.</p>
+<p>The diagram above shows that the impact of the merger was relatively contained. The regions that were most affected were <strong>Pasir Ris</strong>, <strong>Bedok</strong>, and <strong>Tanglin</strong>, where the shortest distance to a nearest Primary school increased by <strong>240m - 1229m</strong>.</p>
+<p>Several areas had schools <strong>added to them,</strong> such as parts of <strong>Punggol</strong>, <strong>Chua Chu Kang</strong> and <strong>Clementi,</strong> where the average distance to nearest primary school decreased by <strong>225m to 1244m</strong></p>
+<p>Overall, the average distance to a primary school in Singapore remained relatively constant.</p>
+</section>
+<section id="distance-matrix-analysis-using-vector-based-gis" class="level3">
+<h3 class="anchored" data-anchor-id="distance-matrix-analysis-using-vector-based-gis">Distance Matrix Analysis using Vector-based GIS</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Buffer%20Primary%20Schools%20Affected%20by%202019%20Merger%201.png" class="img-fluid figure-img" alt="Primary Schools affected by 2019 Merger"></p>
+<p></p><figcaption class="figure-caption">Primary Schools affected by 2019 Merger</figcaption><p></p>
+</figure>
+</div>
+<div>
+<p>7 primary schools have been merged in 2019 as shown in this map.</p>
+<p>The Home-School Distance category priority during the primary school registration exercise takes into account the distance away from schools and citizenship, where Singaporean Citizens living within 1 to 2 km of the school are given priority in the event where the number of registrants is greater than vacancies for a particular school.</p>
+<p>A 2km buffer was constructed around the 14 schools and a distance matrix computed to reflect the impact of school mergers. Orange buffers are for receiving schools and blue buffers are for schools that were being merged into other schools in 2019.</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Distance%20Matri.png" class="img-fluid figure-img" width="595"></p>
+</figure>
+</div>
+<div>
+<p>Extracting the <strong>residential centroids</strong> that fall within the <strong>2km buffers</strong> around merged primary schools, the <strong>difference</strong> in minimum distance between 2017 and 2019 school location was derived and symbolised.</p>
+<p><br>
+</p>
+<p>Mergers for Bendemeer and Cedar primary schools saw the largest change in minimum distance as merge sites are further from old sites compared to other schools. Homes labelled red are 2.4km further from new sites while those labelled green are 1.8km closer.</p>
+<p>Symbolised green vector points indicate a <strong>decrease in minimum distance</strong> from homes to newly merged schools. The merger led to homes becoming closer to the new school site. Symbolised red vector points indicate an <strong>increase in minimum distance</strong> from homes to newly merged schools. The merger led to homes becoming further from the new school site. Symbolised pale yellow vector points indicate little change in minimum distance particularly for Jun Yuan and Casuarina primary schools in the East where merged sites are relatively closer to old sites compared to other merged schools.</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/DM%20-%20Balastier%20and%20Bendemeer.png" class="img-fluid figure-img" width="551"></p>
+</figure>
+</div>
+<div>
+<p>Zooming in on <strong>Balestier Hill</strong> and <strong>Bendemeer Primary schools</strong> for closer analysis, homes nearer to the newly merged site - <strong>Bendemeer Primary school</strong> - are 1.4km to 2.4km closer to the Bendemeer Primary school. Homes surrounding the previous school site - <strong>Balestier Primary school</strong> - are 1.6km to 2.4km further from Bendemeer Primary school. While homes in the middle of the two schools saw minimal change - only a 500 to 600m change in minimum distance.</p>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Percentage%20Change%20in%20Population%20of%20Primary%20Schools.png" class="img-fluid figure-img" width="562"></p>
+</figure>
+</div>
+<p>To study the demand for primary schools, the population of primary school going children by subzone was analysed. The choropleth map shows the percentage change of population of primary school going children from 2017 to 2019. <strong>Negative</strong> values indicate an <strong>increase</strong> in the percentage of primary school population. There is a noticeable increase of <strong>4 to 10%</strong> in Seletar, Tampines North, Bukit Batok west (extension) and Tanglin subzones; while a slight increase of <strong>4% to 0.8%</strong> is seen in North East region of Punggol, Mount Pleasant and Moulmein subzones in Novena planning area as well as in southern regions such as Margret drive and Redhill. <strong>Positive</strong> values indicate a <strong>decrease</strong> in the percentage of primary school going population. There is a noticeable decrease of <strong>2 to 7%</strong> in Kent Ridge and central regions such as Newton, and a slight decrease of <strong>0.3 to 2%</strong> labelled in light blue constituting a large majority of subzones.</p>
+<p><br>
+</p>
+<p>Population choropleth map <strong>confirms falling birth rates</strong>, as more subzones are seeing a decrease in primary school population though <strong>newer estates</strong> - Punggol, Sengkang, Seletar and Tampines North - see an increase. Population trends and demand should be considered when <strong>planning future school mergers</strong> since there will not be a need for new primary schools to be built in maturing estates; instead new schools could better meet the needs of newer estates with younger families.&nbsp;</p>
+<p><br>
+</p>
+</section>
+<section id="conclusion-and-future-work" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion-and-future-work">Conclusion and Future Work</h3>
+<p>The 2019 primary school mergers’ impact on the minimum distance between residential homes and newly merged schools was minimal. The change in distance was a maximum of about 2.4km, which is a relatively small change in distance. Additionally, the overall change throughout Singapore was relatively small.<br>
+</p>
+<p>Moving forward, there is potential in exploring the impact of <strong>Secondary</strong> and <strong>Junior Colleges</strong> as well as analysing how <strong>future planned mergers</strong> from 2023 onwards will impact students’ equity of access to schools. Accessibility to other primary schools surrounding the affected merged primary schools can also be considered for future study.&nbsp;</p>
+<p><br>
+</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
