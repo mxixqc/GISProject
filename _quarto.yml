@@ -13,6 +13,8 @@ website:
         text: Overview
       - href: poster.qmd
         text: Poster
+      - href: results.qmd
+        text: Results
     right:
       - href: index.qmd
         text: Home

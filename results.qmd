@@ -1,0 +1,19 @@
+---
+title: "Results"
+---
+
+### Results 
+
+------------------------------------------------------------------------
+
+![Primary Schools affected by 2019 Merger](images/Buffer%20Primary%20Schools%20Affected%20by%202019%20Merger%201.png){fig-align="center"}
+
+<div>
+
+7 primary schools have been merged in 2019 as shown in this map.
+
+The Home-School Distance category priority during the primary school registration exercise takes into account the distance away from schools and citizenship, where Singaporean Citizens living within 1 to 2 km of the school are given priority in the event where the number of registrants is greater than vacancies for a particular school.
+
+A 2km buffer was constructed around the 14 schools and a distance matrix computed to reflect the impact of school mergers. Orange buffers are for receiving schools and blue buffers are for schools that were being merged into other schools in 2019.
+
+</div>
