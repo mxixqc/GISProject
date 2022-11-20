@@ -19,7 +19,7 @@ These were some factors that were considered for the merger of schools:
 
 -   sentiments of all schools involved
 
-In this project, we will be focusing on the Primary Schools that have been merged in 2019.
+In this project, we will be focusing on the Primary Schools that have been merged in 2019 and analysing the impacts of the merger on the distance between schools and residential buildings.
 
 Here are some information that we found interesting!
 
