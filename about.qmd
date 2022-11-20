@@ -2,6 +2,8 @@
 title: "About our team"
 ---
 
+You can access our Github through [this link](https://github.com/mxixqc/GISProject)!
+
 |                Anna Tseng                 |                Shaan Walia                |               Michelle Lee                |
 |:-----------------------------------------:|:-----------------------------------------:|:-----------------------------------------:|
 |                  Year 3                   |                  Year 3                   |                  Year 3                   |
