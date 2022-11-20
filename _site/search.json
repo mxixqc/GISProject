@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About our team",
+    "section": "",
+    "text": "Anna Tseng\nShaan Walia\nMichelle Lee\n\n\n\n\nYear 3\nYear 3\nYear 3\n\n\nSchool of Computing & Information Systems\nSchool of Computing & Information Systems\nSchool of Computing & Information Systems"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "G1T4: Merger of Primary Schools in 2019",
+    "section": "",
+    "text": "Introduction\nThere has been a decrease in birth rates in Singapore, hence leading to fewer numbers of enrollments for schools. In 2019, MOE conducted a merging exercise, where 7 pairs of primary schools and 3 pairs of secondary schools merged.\nThese were some factors that were considered for the merger of schools:\n\nSchools’ history and heritage\nenrollments\nstakeholders’ interests\nsentiments of all schools involved\n\nIn this project, we will be focusing on the Primary Schools that have been merged in 2019 and analysing the impacts of the merger on the distance between schools and residential buildings.\nHere are some information that we found interesting!\n\n\nInformation on Primary School Merger and Priority Calculations\n\nAddress used for Registration\nHome School Distance calculation change\nNames of Primary and Secondary Schools Merging Between 2022 and 2025\n\n\nInformation on Upcoming Merger\n\n8 primary and 10 secondary schools to merge\n18 primary and secondary schools to undergo mergers"
+  },
+  {
     "objectID": "overview.html",
     "href": "overview.html",
     "title": "Introduction",
@@ -11,14 +25,21 @@
     "href": "overview.html#project-motivation",
     "title": "Introduction",
     "section": "Project Motivation",
-    "text": "Project Motivation\nWe are interested in how mergers of education institutions affect the equity of access. With the increasing ageing population and lower birthrates in Singapore, more mergers of schools will be conducted between 2022 and 2025. This would directly affect the priority admission for primary school registration exercises as it takes into account the distance between the school and the residential building. This distance would be a buffer of 1km - 2km of the school.\nIn this project, we aim to focus on Primary Schools by analysing how the distance from a residential building to the nearest primary school has been affected. By scoping to primary schools, we plan to have an in-depth analysis on the impact of mergers on equity of access."
+    "text": "Project Motivation\nWe are interested in how mergers of education institutions affect the equity of access. With the increasing ageing population and lower birthrates in Singapore, more mergers of schools will be conducted between 2022 and 2025. This would directly affect the priority admission for primary school registration exercises as it takes into account the distance between the school and the residential building. This distance would be a buffer of 1km - 2km of the school."
+  },
+  {
+    "objectID": "overview.html#scope-of-work",
+    "href": "overview.html#scope-of-work",
+    "title": "Introduction",
+    "section": "Scope of work",
+    "text": "Scope of work\nIn this project, we aim to focus on Primary Schools by analysing how the distance from a residential building to the nearest primary school has been affected. By scoping to primary schools, we plan to have an in-depth analysis on the impact of mergers on equity of access."
   },
   {
     "objectID": "overview.html#project-objectives",
     "href": "overview.html#project-objectives",
     "title": "Introduction",
     "section": "Project Objectives",
-    "text": "Project Objectives\n\nObjective 1\nUnderstand the change in distance between residential buildings and primary schools before and after the mergers in 2019. This will be done using the following methods:\n\nAnalytical hexagons\nDistance matrix analysis using vector-based GIS\n\n\n\nObjective 2\nUnderstand future population changes in Singapore, which may be used for future primary school mergers. This will be done using the choropeth map to visualise the percentage change in population of primary school children by subzone from 2017 to 2017."
+    "text": "Project Objectives\n\nObjective 1\nUnderstand the change in distance between residential buildings and primary schools before and after the mergers in 2019. This will be done using the following methods:\n\nAnalytical hexagons\nDistance matrix analysis using vector-based GIS\n\n\n\nObjective 2\nUnderstand future population changes in Singapore, which may be used for future primary school mergers. This will be done using the choropleth map to visualise the percentage change in population of primary school children by subzone from 2017 to 2017."
   },
   {
     "objectID": "overview.html#project-tasks",
@@ -32,7 +53,21 @@
     "href": "overview.html#data",
     "title": "Introduction",
     "section": "Data",
-    "text": "Data\n\nGeofabrik\nSingstat\nData.gov.sg"
+    "text": "Data\n\nGeofabrik\nSingstat.gov.sg\nData.gov.sg"
+  },
+  {
+    "objectID": "overview.html#project-schedule---gannt-chart",
+    "href": "overview.html#project-schedule---gannt-chart",
+    "title": "Introduction",
+    "section": "Project Schedule - Gannt Chart",
+    "text": "Project Schedule - Gannt Chart"
+  },
+  {
+    "objectID": "report.html",
+    "href": "report.html",
+    "title": "GISProject",
+    "section": "",
+    "text": "Analytical Hexagons\nDistance Matrix Analysis using Vector-based GIS\nChloropleth Map\n\n\n\n\n\n\n\n\nWe designated 1000m x 1000m hexagons around Singapore to replicate the 1km radius around schools. We did this to mimic the priority area parents of incoming P1 students get when choosing their primary school.\nThe diagram above shows that the impact of the merger was relatively contained. The regions that were most affected were Pasir Ris, Bedok, and Tanglin, where the shortest distance to a nearest Primary school increased by 240m - 1229m.\nSeveral areas had schools added to them, such as parts of Punggol, Chua Chu Kang and Clementi, where the average distance to nearest primary school decreased by 225m to 1244m\nOverall, the average distance to a primary school in Singapore remained relatively constant.\n\n\n\n\n\n\nPrimary Schools affected by 2019 Merger\n\n\n\n7 primary schools have been merged in 2019 as shown in this map.\nThe Home-School Distance category priority during the primary school registration exercise takes into account the distance away from schools and citizenship, where Singaporean Citizens living within 1 to 2 km of the school are given priority in the event where the number of registrants is greater than vacancies for a particular school.\nA 2km buffer was constructed around the 14 schools and a distance matrix computed to reflect the impact of school mergers. Orange buffers are for receiving schools and blue buffers are for schools that were being merged into other schools in 2019.\n\n\n\n\n\n\n\nExtracting the residential centroids that fall within the 2km buffers around merged primary schools, the difference in minimum distance between 2017 and 2019 school location was derived and symbolised.\nMergers for Bendemeer and Cedar primary schools saw the largest change in minimum distance as merge sites are further from old sites compared to other schools. Homes labelled red are 2.4km further from new sites while those labelled green are 1.8km closer.\nSymbolised green vector points indicate a decrease in minimum distance from homes to newly merged schools. The merger led to homes becoming closer to the new school site. Symbolised red vector points indicate an increase in minimum distance from homes to newly merged schools. The merger led to homes becoming further from the new school site. Symbolised pale yellow vector points indicate little change in minimum distance particularly for Jun Yuan and Casuarina primary schools in the East where merged sites are relatively closer to old sites compared to other merged schools.\n\n\n\n\n\n\n\nZooming in on Balestier Hill and Bendemeer Primary schools for closer analysis, homes nearer to the newly merged site - Bendemeer Primary school - are 1.4km to 2.4km closer to the Bendemeer Primary school. Homes surrounding the previous school site - Balestier Primary school - are 1.6km to 2.4km further from Bendemeer Primary school. While homes in the middle of the two schools saw minimal change - only a 500 to 600m change in minimum distance.\n\n\n\n\n\n\n\n\n\nTo study the demand for primary schools, the population of primary school going children by subzone was analysed. The choropleth map shows the percentage change of population of primary school going children from 2017 to 2019. Negative values indicate an increase in the percentage of primary school population. There is a noticeable increase of 4 to 10% in Seletar, Tampines North, Bukit Batok west (extension) and Tanglin subzones; while a slight increase of 4% to 0.8% is seen in North East region of Punggol, Mount Pleasant and Moulmein subzones in Novena planning area as well as in southern regions such as Margret drive and Redhill. Positive values indicate a decrease in the percentage of primary school going population. There is a noticeable decrease of 2 to 7% in Kent Ridge and central regions such as Newton, and a slight decrease of 0.3 to 2% labelled in light blue constituting a large majority of subzones.\nPopulation choropleth map confirms falling birth rates, as more subzones are seeing a decrease in primary school population though newer estates - Punggol, Sengkang, Seletar and Tampines North - see an increase. Population trends and demand should be considered when planning future school mergers since there will not be a need for new primary schools to be built in maturing estates; instead new schools could better meet the needs of newer estates with younger families. \n\n\n\n\n\n\nThe 2019 primary school mergers’ impact on the minimum distance between residential homes and newly merged schools was minimal. The change in distance was a maximum of about 2.4km, which is a relatively small change in distance. Additionally, the overall change throughout Singapore was relatively small.\n\nMoving forward, there is potential in exploring the impact of Secondary and Junior Colleges as well as analysing how future planned mergers from 2023 onwards will impact students’ equity of access to schools. Accessibility to other primary schools surrounding the affected merged primary schools can also be considered for future study."
   },
   {
     "objectID": "results.html",
@@ -40,26 +75,5 @@
     "title": "Results",
     "section": "",
     "text": "Primary Schools affected by 2019 Merger\n\n\n\n7 primary schools have been merged in 2019 as shown in this map.\nThe Home-School Distance category priority during the primary school registration exercise takes into account the distance away from schools and citizenship, where Singaporean Citizens living within 1 to 2 km of the school are given priority in the event where the number of registrants is greater than vacancies for a particular school.\nA 2km buffer was constructed around the 14 schools and a distance matrix computed to reflect the impact of school mergers. Orange buffers are for receiving schools and blue buffers are for schools that were being merged into other schools in 2019."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "G1T4: Merger of Primary Schools in 2019",
-    "section": "",
-    "text": "Introduction\nThere has been a decrease in birth rates in Singapore, hence leading to fewer numbers of enrollments for schools. In 2019, MOE conducted a merging exercise, where 7 pairs of primary schools and 3 pairs of secondary schools merged.\nThese were some factors that were considered for the merger of schools:\n\nSchools’ history and heritage\nenrollments\nstakeholders’ interests\nsentiments of all schools involved\n\nIn this project, we will be focusing on the Primary Schools that have been merged in 2019.\nHere are some information that we found interesting!\n\n\nInformation on Primary School Merger and Priority Calculations\n\nAddress used for Registration\nHome School Distance calculation change\nNames of Primary and Secondary Schools Merging Between 2022 and 2025\n\n\nInformation on Upcoming Merger\n\n8 primary and 10 secondary schools to merge\n18 primary and secondary schools to undergo mergers"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Anna Tseng Year 3 School of Computing & Information Systems\nMichelle Lee Year 3 School of Computing & Information Systems\nShaan Walia Year 3 School of Computing & Information Systems\nHere!"
-  },
-  {
-    "objectID": "report.html",
-    "href": "report.html",
-    "title": "GISProject",
-    "section": "",
-    "text": "Analytical Hexagons\nDistance Matrix Analysis using Vector-based GIS\n\n\n\n\n\n\n\n\nWe designated 1000m x 1000m hexagons around Singapore to replicate the 1km radius around schools. We did this to mimic the priority area parents of incoming P1 students get when choosing their primary school.\nThe diagram above shows that the impact of the merger was relatively contained. The regions that were most affected were Pasir Ris, Bedok, and Tanglin, where the shortest distance to a nearest Primary school increased by 240m - 1229m.\nSeveral areas had schools added to them, such as parts of Punggol, Chua Chu Kang and Clementi, where the average distance to nearest primary school decreased by 225m to 1244m\nOverall, the average distance to a primary school in Singapore remained relatively constant.\n\n\n\n\n\n\nPrimary Schools affected by 2019 Merger\n\n\n\n7 primary schools have been merged in 2019 as shown in this map.\nThe Home-School Distance category priority during the primary school registration exercise takes into account the distance away from schools and citizenship, where Singaporean Citizens living within 1 to 2 km of the school are given priority in the event where the number of registrants is greater than vacancies for a particular school.\nA 2km buffer was constructed around the 14 schools and a distance matrix computed to reflect the impact of school mergers. Orange buffers are for receiving schools and blue buffers are for schools that were being merged into other schools in 2019.\n\n\n\n\n\n\n\nExtracting the residential centroids that fall within the 2km buffers around merged primary schools, the difference in minimum distance between 2017 and 2019 school location was derived and symbolised.\n\n\nMergers for Bendemeer and Cedar primary schools saw the largest change in minimum distance as merge sites are further from old sites compared to other schools. Homes labelled red are 2.4km further from new sites while those labelled green are 1.8km closer.\nSymbolised green vector points indicate a decrease in minimum distance from homes to newly merged schools. The merger led to homes becoming closer to the new school site. Symbolised red vector points indicate an increase in minimum distance from homes to newly merged schools. The merger led to homes becoming further from the new school site. Symbolised pale yellow vector points indicate little change in minimum distance particularly for Jun Yuan and Casuarina primary schools in the East where merged sites are relatively closer to old sites compared to other merged schools.\n\n\n\n\n\n\n\nZooming in on Balestier Hill and Bendemeer Primary schools for closer analysis, homes nearer to the newly merged site - Bendemeer Primary school - are 1.4km to 2.4km closer to the Bendemeer Primary school. Homes surrounding the previous school site - Balestier Primary school - are 1.6km to 2.4km further from Bendemeer Primary school. While homes in the middle of the two schools saw minimal change - only a 500 to 600m change in minimum distance.\n\n\n\n\n\n\nTo study the demand for primary schools, the population of primary school going children by subzone was analysed. The choropleth map shows the percentage change of population of primary school going children from 2017 to 2019. Negative values indicate an increase in the percentage of primary school population. There is a noticeable increase of 4 to 10% in Seletar, Tampines North, Bukit Batok west (extension) and Tanglin subzones; while a slight increase of 4% to 0.8% is seen in North East region of Punggol, Mount Pleasant and Moulmein subzones in Novena planning area as well as in southern regions such as Margret drive and Redhill. Positive values indicate a decrease in the percentage of primary school going population. There is a noticeable decrease of 2 to 7% in Kent Ridge and central regions such as Newton, and a slight decrease of 0.3 to 2% labelled in light blue constituting a large majority of subzones.\n\n\nPopulation choropleth map confirms falling birth rates, as more subzones are seeing a decrease in primary school population though newer estates - Punggol, Sengkang, Seletar and Tampines North - see an increase. Population trends and demand should be considered when planning future school mergers since there will not be a need for new primary schools to be built in maturing estates; instead new schools could better meet the needs of newer estates with younger families. \n\n\n\n\n\nThe 2019 primary school mergers’ impact on the minimum distance between residential homes and newly merged schools was minimal. The change in distance was a maximum of about 2.4km, which is a relatively small change in distance. Additionally, the overall change throughout Singapore was relatively small.\n\nMoving forward, there is potential in exploring the impact of Secondary and Junior Colleges as well as analysing how future planned mergers from 2023 onwards will impact students’ equity of access to schools. Accessibility to other primary schools surrounding the affected merged primary schools can also be considered for future study."
   }
 ]

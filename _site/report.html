@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -115,10 +115,11 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
   <ul class="collapse">
-  <li><a href="#analytical-hexagons" id="toc-analytical-hexagons" class="nav-link" data-scroll-target="#analytical-hexagons">Analytical Hexagons</a></li>
-  <li><a href="#distance-matrix-analysis-using-vector-based-gis" id="toc-distance-matrix-analysis-using-vector-based-gis" class="nav-link" data-scroll-target="#distance-matrix-analysis-using-vector-based-gis">Distance Matrix Analysis using Vector-based GIS</a></li>
-  <li><a href="#conclusion-and-future-work" id="toc-conclusion-and-future-work" class="nav-link" data-scroll-target="#conclusion-and-future-work">Conclusion and Future Work</a></li>
+  <li><a href="#analytical-hexagons" id="toc-analytical-hexagons" class="nav-link" data-scroll-target="#analytical-hexagons">1. Analytical Hexagons</a></li>
+  <li><a href="#distance-matrix-analysis-using-vector-based-gis" id="toc-distance-matrix-analysis-using-vector-based-gis" class="nav-link" data-scroll-target="#distance-matrix-analysis-using-vector-based-gis">2. Distance Matrix Analysis using Vector-based GIS</a></li>
+  <li><a href="#chloropleth-map" id="toc-chloropleth-map" class="nav-link" data-scroll-target="#chloropleth-map">3. Chloropleth Map</a></li>
   </ul></li>
+  <li><a href="#conclusion-and-future-work" id="toc-conclusion-and-future-work" class="nav-link" data-scroll-target="#conclusion-and-future-work">Conclusion and Future Work</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -135,9 +136,10 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li><p>Analytical Hexagons</p></li>
 <li><p>Distance Matrix Analysis using Vector-based GIS</p></li>
+<li><p>Chloropleth Map</p></li>
 </ol>
 <section id="analytical-hexagons" class="level3">
-<h3 class="anchored" data-anchor-id="analytical-hexagons">Analytical Hexagons</h3>
+<h3 class="anchored" data-anchor-id="analytical-hexagons">1. Analytical Hexagons</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Grids.webp" class="img-fluid figure-img" width="634"></p>
@@ -149,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Overall, the average distance to a primary school in Singapore remained relatively constant.</p>
 </section>
 <section id="distance-matrix-analysis-using-vector-based-gis" class="level3">
-<h3 class="anchored" data-anchor-id="distance-matrix-analysis-using-vector-based-gis">Distance Matrix Analysis using Vector-based GIS</h3>
+<h3 class="anchored" data-anchor-id="distance-matrix-analysis-using-vector-based-gis">2. Distance Matrix Analysis using Vector-based GIS</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Buffer%20Primary%20Schools%20Affected%20by%202019%20Merger%201.png" class="img-fluid figure-img" alt="Primary Schools affected by 2019 Merger"></p>
@@ -168,8 +170,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div>
 <p>Extracting the <strong>residential centroids</strong> that fall within the <strong>2km buffers</strong> around merged primary schools, the <strong>difference</strong> in minimum distance between 2017 and 2019 school location was derived and symbolised.</p>
-<p><br>
-</p>
 <p>Mergers for Bendemeer and Cedar primary schools saw the largest change in minimum distance as merge sites are further from old sites compared to other schools. Homes labelled red are 2.4km further from new sites while those labelled green are 1.8km closer.</p>
 <p>Symbolised green vector points indicate a <strong>decrease in minimum distance</strong> from homes to newly merged schools. The merger led to homes becoming closer to the new school site. Symbolised red vector points indicate an <strong>increase in minimum distance</strong> from homes to newly merged schools. The merger led to homes becoming further from the new school site. Symbolised pale yellow vector points indicate little change in minimum distance particularly for Jun Yuan and Casuarina primary schools in the East where merged sites are relatively closer to old sites compared to other merged schools.</p>
 </div>
@@ -181,20 +181,22 @@ ul.task-list li input[type="checkbox"] {
 <div>
 <p>Zooming in on <strong>Balestier Hill</strong> and <strong>Bendemeer Primary schools</strong> for closer analysis, homes nearer to the newly merged site - <strong>Bendemeer Primary school</strong> - are 1.4km to 2.4km closer to the Bendemeer Primary school. Homes surrounding the previous school site - <strong>Balestier Primary school</strong> - are 1.6km to 2.4km further from Bendemeer Primary school. While homes in the middle of the two schools saw minimal change - only a 500 to 600m change in minimum distance.</p>
 </div>
+</section>
+<section id="chloropleth-map" class="level3">
+<h3 class="anchored" data-anchor-id="chloropleth-map">3. Chloropleth Map</h3>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Percentage%20Change%20in%20Population%20of%20Primary%20Schools.png" class="img-fluid figure-img" width="562"></p>
 </figure>
 </div>
 <p>To study the demand for primary schools, the population of primary school going children by subzone was analysed. The choropleth map shows the percentage change of population of primary school going children from 2017 to 2019. <strong>Negative</strong> values indicate an <strong>increase</strong> in the percentage of primary school population. There is a noticeable increase of <strong>4 to 10%</strong> in Seletar, Tampines North, Bukit Batok west (extension) and Tanglin subzones; while a slight increase of <strong>4% to 0.8%</strong> is seen in North East region of Punggol, Mount Pleasant and Moulmein subzones in Novena planning area as well as in southern regions such as Margret drive and Redhill. <strong>Positive</strong> values indicate a <strong>decrease</strong> in the percentage of primary school going population. There is a noticeable decrease of <strong>2 to 7%</strong> in Kent Ridge and central regions such as Newton, and a slight decrease of <strong>0.3 to 2%</strong> labelled in light blue constituting a large majority of subzones.</p>
-<p><br>
-</p>
 <p>Population choropleth map <strong>confirms falling birth rates</strong>, as more subzones are seeing a decrease in primary school population though <strong>newer estates</strong> - Punggol, Sengkang, Seletar and Tampines North - see an increase. Population trends and demand should be considered when <strong>planning future school mergers</strong> since there will not be a need for new primary schools to be built in maturing estates; instead new schools could better meet the needs of newer estates with younger families.&nbsp;</p>
 <p><br>
 </p>
 </section>
-<section id="conclusion-and-future-work" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion-and-future-work">Conclusion and Future Work</h3>
+</section>
+<section id="conclusion-and-future-work" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-and-future-work">Conclusion and Future Work</h2>
 <p>The 2019 primary school mergers’ impact on the minimum distance between residential homes and newly merged schools was minimal. The change in distance was a maximum of about 2.4km, which is a relatively small change in distance. Additionally, the overall change throughout Singapore was relatively small.<br>
 </p>
 <p>Moving forward, there is potential in exploring the impact of <strong>Secondary</strong> and <strong>Junior Colleges</strong> as well as analysing how <strong>future planned mergers</strong> from 2023 onwards will impact students’ equity of access to schools. Accessibility to other primary schools surrounding the affected merged primary schools can also be considered for future study.&nbsp;</p>
@@ -202,7 +204,6 @@ ul.task-list li input[type="checkbox"] {
 </p>
 
 
-</section>
 </section>
 </section>
 
