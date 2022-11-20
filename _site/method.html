@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>GISProject – method</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">GISProject</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./overview.html">Overview</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./poster.html">Poster</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./report.html">GIS Report</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./method.html" aria-current="page">Method</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html">About Us</a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link active" data-scroll-target="#methodology">Methodology</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="methodology" class="level3">
+<h3 class="anchored" data-anchor-id="methodology">Methodology</h3>
+<section id="data-preparation-for-distance-matrix" class="level4">
+<h4 class="anchored" data-anchor-id="data-preparation-for-distance-matrix">Data Preparation for Distance Matrix</h4>
+<ol type="a">
+<li><p>Subzone boundary data can be extracted from data.gov.sg → master plan 2014 subzone boundary (<a href="https://data.gov.sg/dataset/master-plan-2014-subzone-boundary-no-sea" class="uri">https://data.gov.sg/dataset/master-plan-2014-subzone-boundary-no-sea</a> )</p></li>
+<li><p>Import the kml MP14_SUBZONE_NO_SEA_PL file and save it into geopackage, converting the CRS to EPSG3414/ SVY21. Rename it as 'MP14 subzone'.</p></li>
+</ol>
+</section>
+<section id="data-extraction-for-schools-from-online-sources" class="level4">
+<h4 class="anchored" data-anchor-id="data-extraction-for-schools-from-online-sources">Data Extraction for Schools from Online Sources</h4>
+</section>
+<section id="data" class="level4">
+<h4 class="anchored" data-anchor-id="data">2019 data</h4>
+<ol type="i">
+<li><p>Location of schools extracted from data.gov.sg (<a href="https://data.gov.sg/dataset/school-directory-and-information" class="uri">https://data.gov.sg/dataset/school-directory-and-information</a> ) → general-information-of-schools.csv</p></li>
+<li><p>Since general-information-of-schools.csv does not contain latitude or longitude data/ coordinate data, geocoding using the plugin MMQGIS needs to be done. Before geocoding, open the csv in excel and add 2 more columns 'City' and 'Singapore' and fill both columns with 'Singapore'. Save changes and rename the csv to 'schools_info.csv'.</p></li>
+<li><p>Download the MMQGIS plugin on QGIS and navigate to Geocode &gt; Geocode CSV with web service. Select schools_info.csv for input CSV file, and OpenStreetMap/ Nominatim for geocoding web service. For output file name create a new folder 'found' to save geocoded shapefile. For the Not Found output list, name it not-found.csv.</p>
+<p><img src="images/Project%20Website%20%20(1).fld/image001.png" class="img-fluid"></p></li>
+<li><p>The resulting 'found.shp' should contain only 324 records once loaded onto the layers panel. Open the attribute table and select the primary schools using these queries using the Select by expression icon</p>
+<p><img src="images/Project%20Website%20%20(1).fld/image003.png" class="img-fluid"></p></li>
+<li><p>Save the selected features as csv (Export &gt; Save selected features as). Name it 'priAll19-173'</p></li>
+<li><p>Open the not-found.csv file, copy over the details of the following primary schools into 'priAll19-173.csv'. As for the column 'latlong', for each of the following primary schools, retrieve the latlong coordinates from google maps.<br>
+<img src="images/Project%20Website%20%20(1).fld/image010.jpg" class="img-fluid"></p></li>
+<li><p>Separate the latlong data into 2 columns 'lat' and 'long'. Select the 'latlong' column, Data &gt; text to columns &gt; choose the delimiter as comma. 2 new columns 'lat' and 'long' should be created. Save this csv named 'priAll19.csv'.</p></li>
+<li><p>Import&nbsp; 'priAll19.csv' into QGIS (layer &gt; add layer &gt; add delimited text layer ) and input the following detail<br>
+</p>
+<p><img src="images/Project%20Website%20%20(1).fld/image011.png" class="img-fluid"><br>
+</p></li>
+</ol>
+<!-- -->
+<ol start="9" type="i">
+<li>Save the layer priAll19 into geopackage format with the CRS EPSG3414<img src="images/Project%20Website%20%20(1).fld/image014.jpg" class="img-fluid"></li>
+</ol>
+</section>
+<section id="data-1" class="level4">
+<h4 class="anchored" data-anchor-id="data-1">2017 data</h4>
+<ol type="i">
+<li><p>Download 2017 primary school locations from (<a href="https://github.com/hxchua/datadoubleconfirm/blob/master/datasets/primaryschoolsg.csv" class="uri">https://github.com/hxchua/datadoubleconfirm/blob/master/datasets/primaryschoolsg.csv</a> )</p></li>
+<li><p>It should contain the 7 schools that were merged into other schools in 2019</p>
+<p><img src="images/Project%20Website%20%20(1).fld/image016.jpg" class="img-fluid"></p></li>
+</ol>
+<!-- -->
+<ol start="3" type="i">
+<li>Save it into geopackage with EPSG3414 projection, and named 'priAll17'.</li>
+</ol>
+</section>
+<section id="data-extraction-for-residential-buildings-from-online-sources" class="level4">
+<h4 class="anchored" data-anchor-id="data-extraction-for-residential-buildings-from-online-sources">Data extraction for residential buildings from online sources</h4>
+<ol type="a">
+<li><p>Download the shapefile from Geofabrik (<a href="https://download.geofabrik.de/asia/malaysia-singapore-brunei.html" class="uri">https://download.geofabrik.de/asia/malaysia-singapore-brunei.html</a> ) → malaysia-singapore-brunei-latest-free.shp.zip</p></li>
+<li><p>import the file 'gis_osm_buildings_a_free_1.shp' into QGIS</p></li>
+<li><p>Clip the buildings that fall within singapore (vector &gt; geoprocessing tools &gt; clip). For input layer, select 'gis_osm_buildings_a_free_1' layer. For overlay layer, select 'MP14 subzone'.</p></li>
+<li><p>A new temporary layer 'Clipped' should be added to layers panel. Open the attribute table, and select the residential type buildings. Save this layer into geopackage as 'Residential-buildings'.</p>
+<p><img src="images/Project%20Website%20%20(1).fld/image018.jpg" class="img-fluid"></p></li>
+<li><p>To get residential building centroids<a href="#_msocom_1">[1]</a> , use the plugin RealCentroid. For polygon layer, select 'Residential-buildings'. For output point on surface layer, create a folder and name the output file 'residential-centroids'. Save the newly created layer to geopackage named 'Resid-centroid'.</p></li>
+</ol>
+</section>
+<section id="distance-matrix-for-all-merged-schools" class="level4">
+<h4 class="anchored" data-anchor-id="distance-matrix-for-all-merged-schools">Distance matrix for all merged schools</h4>
+<ol type="a">
+<li><p>From the priAll17 layer, select 14 schools affected by the 2019 merger (​​<a href="https://www.moe.gov.sg/-/media/files/news/press/2017/annex-a---named-of-pri-and-sec-schools-merging-in-2019.pdf" class="uri">https://www.moe.gov.sg/-/media/files/news/press/2017/annex-a---named-of-pri-and-sec-schools-merging-in-2019.pdf</a> ). Save these selected features to geopackage named 'mergedPri'.</p>
+<ol type="i">
+<li>Save unmerged17: Select the 2017 schools from mergedPri and save them into a separate layer named unmerged17</li>
+</ol></li>
+</ol>
+<p><img src="images/Project%20Website%20%20(1).fld/image019.png" class="img-fluid" width="295"></p>
+<ol start="4" type="1">
+<li><div>
+<ol type="a">
+<li><div>
+<ol start="2" type="i">
+<li>Save merged19: Select the 2019 schools from mergedPri and save them into a separate layer named merged19</li>
+</ol>
+</div></li>
+</ol>
+</div></li>
+</ol>
+<p><img src="images/Project%20Website%20%20(1).fld/image021.png" class="img-fluid" width="234"></p>
+<ol start="4" type="1">
+<li><div>
+<ol start="2" type="a">
+<li>Create 2km dissolved buffers around the 14 affected schools (vector &gt; geoprocessing tools &gt; buffer) using the mergedPri layer. Enter the fields below, ensuring the 'Dissolve result' checkbox is checked.</li>
+</ol>
+</div></li>
+</ol>
+<p><img src="images/Project%20Website%20%20(1).fld/image023.png" class="img-fluid" width="467"></p>
+<ol start="4" type="1">
+<li><div>
+<ol start="3" type="a">
+<li>Select the centroids that fall within the 2km buffers (vector &gt; research tools &gt; select by location) according to the screenshot below and save selected features as 'ALL-study area'.</li>
+</ol>
+</div></li>
+</ol>
+<p><img src="images/Project%20Website%20%20(1).fld/image025.png" class="img-fluid"></p>
+<ol start="4" type="1">
+<li><div>
+<ol start="4" type="a">
+<li>To obtain distance matrix for unmerged17 layer, (vector &gt; analysis tools &gt; distance matrix). For input point layer, select the ALL-study area layer. For target point layer, select unmerged17 layer. For output matrix type, select summary distance matrix. A temporary layer 'Distance Matrix' will be created, rename this to 'Distance Matrix17'.</li>
+</ol>
+</div></li>
+</ol>
+<p><img src="images/Project%20Website%20%20(1).fld/image027.png" class="img-fluid"></p>
+<ol start="4" type="1">
+<li><div>
+<ol start="5" type="a">
+<li>Repeat step 4d) with the merged19 layer. A temporary layer 'Distance Matrix' will be created, rename this to 'Distance Matrix19'</li>
+</ol>
+</div></li>
+</ol>
+<p><img src="images/Project%20Website%20%20(1).fld/image029.png" class="img-fluid"></p>
+<ol start="4" type="1">
+<li><div>
+<ol start="6" type="a">
+<li><p>Perform a relational join on 'Distance Matrix19', joining 'Distance Matrix17' into 'Distance Matrix19' on the fid as Join field and Target field.</p></li>
+<li><p>Next, on 'Distance Matrix19' create a new field named MIN DIFF with the following query to get the difference in minimum distance. Save this layer into geopackage named 'ALL-matrix diff'.</p></li>
+</ol>
+</div></li>
+</ol>
+<p><img src="images/Project%20Website%20%20(1).fld/image031.png" class="img-fluid"></p>
+<ol start="4" type="1">
+<li><div>
+<ol start="8" type="a">
+<li>To symbolise 'ALL-matrix diff', (properties &gt; symbology) select the graduated symbology and MIN DIFF as value field. Select Natural Breaks for symbology mode.</li>
+</ol>
+</div></li>
+</ol>
+<p><img src="images/Project%20Website%20%20(1).fld/image033.png" class="img-fluid"></p>
+<ol start="5" type="1">
+<li><p>Distance matrix for bendemeer and balestier hill primary school</p>
+<ol type="a">
+<li>Select bendemeer and balestier hill primary school&nbsp; from 'mergedPri' layer and create 2km dissolved buffers around the 2 schools (vector &gt; geoprocessing tools &gt; buffer). Enter the fields below, ensuring the 'Selected feature only' and 'Dissolve result' checkboxes are checked.</li>
+</ol></li>
+</ol>
+<p><img src="images/Project%20Website%20%20(1).fld/image035.png" class="img-fluid"></p>
+<ol start="5" type="1">
+<li><div>
+<ol start="2" type="a">
+<li><p>Select the centroids that fall within the 2km buffers using step 4c)&nbsp; and save selected features as 'BB-study area'.</p></li>
+<li><p>Repeat steps 4d) to 4g) to obtain the MIN DIFF and name the final layer 'BB-matrix diff'.</p></li>
+<li><p>Symbolise 'BB-matrix diff' using step 4h)</p></li>
+</ol>
+</div></li>
+</ol>
+<p><br>
+</p>
+<p>Data preparation for choropleth map</p>
+<ol type="1">
+<li><p>Data extraction from online sources</p>
+<ol type="a">
+<li>Population data can be extracted from singstat (<a href="https://www.singstat.gov.sg/find-data/search-by-theme/population/geographic-distribution/latest-data" class="uri">https://www.singstat.gov.sg/find-data/search-by-theme/population/geographic-distribution/latest-data</a> ) → <a href="https://www.singstat.gov.sg/-/media/files/find_data/population/statistical_tables/respopagesextod2011to2020.ashx">Singapore Residents by Planning Area / Subzone, Age Group, Sex and Type of Dwelling, June 2011-2020</a></li>
+</ol></li>
+<li><p>Import the data</p>
+<ol type="a">
+<li><p>Bring in the csv 'respopagesex2011to2020' : layer &gt; add layer &gt; add delimited text layer and select the csv to import.</p></li>
+<li><p>Ensure that 'No geometry' option is selected</p></li>
+</ol></li>
+</ol>
+<p><img src="images/Project%20Website%20%20(1).fld/image039.png" class="img-fluid"></p>
+<ol start="3" type="1">
+<li><p>Extraction of relevant data</p>
+<ol type="a">
+<li><p>Create a new virtual layer to extract the relevant data for 2017</p></li>
+<li><p>Layer &gt; create layer &gt; new virtual layer</p></li>
+<li><p>Name the layer 'pop2017-pri' and import the population csv 'respopagesex2011to2020' from the layers panel. Then enter the following SQL statement to extract the population of primary school children and total population in 2017</p>
+<ol type="i">
+<li><img src="images/Project%20Website%20%20(1).fld/image039.png" class="img-fluid"></li>
+</ol></li>
+<li><p>Click Add and a virtual table should be created on the layers panel named 'pop2017-pri'. Save this layer into geopackage format.</p></li>
+<li><p>Repeat steps 3a) to 3d) for 2019.</p></li>
+</ol>
+<pre><code>i.  Using this SQL query instead:
+
+ii. ![](images/Project%20Website%20%20(1).fld/image041.png)</code></pre>
+<ol start="6" type="a">
+<li>Current layers should be 'pop2017-pri' and 'pop2019-pri' saved into geopackage.</li>
+</ol></li>
+<li><p>Data manipulation - calculating percentage of primary school children</p>
+<ol type="a">
+<li><p>Open the data table for pop2017-pri layer.</p></li>
+<li><p>Open the field calculator (<img src="images/Project%20Website%20%20(1).fld/image043.png" class="img-fluid">) and create a new field named 'SUBZONE_N' that capitalises the subzone names. Ensure the output field type is Text(string)</p>
+<ol type="i">
+<li><img src="images/Project%20Website%20%20(1).fld/image045.png" class="img-fluid"></li>
+</ol></li>
+<li><p>Next create another field that calculates the percentage of primary school children and ensure the output field type is Decimal Number (real).</p>
+<ol type="i">
+<li><img src="images/Project%20Website%20%20(1).fld/image047.png" class="img-fluid"></li>
+</ol></li>
+<li><p>Next, for the newly created PER column, convert the cells with NULL values to 0. By checking the update existing field checkbox.</p>
+<ol type="i">
+<li><img src="images/Project%20Website%20%20(1).fld/image049.png" class="img-fluid"></li>
+</ol></li>
+<li><p>Save and close the attribute table which should have the following columns</p>
+<ol type="i">
+<li><img src="images/Project%20Website%20%20(1).fld/image051.png" class="img-fluid"></li>
+</ol></li>
+<li><p>Repeat steps 4a) to 4e) for the layer pop2019-pri</p></li>
+</ol></li>
+<li><p>Data manipulation - calculating percentage difference</p>
+<ol type="a">
+<li><p>Duplicate the layer pop2017-pri from the layers panel and rename this layer as 'perDiff- 17-19'.</p></li>
+<li><p>Open the attribute table for 'perDiff- 17-19' and perform a relational join on the SUBZONE_N field by navigating as follows:</p>
+<ol type="i">
+<li><p>From properties Joins tab <img src="images/Project%20Website%20%20(1).fld/image053.png" class="img-fluid"> &gt; add new join <img src="images/Project%20Website%20%20(1).fld/image055.png" class="img-fluid"> &gt; enter the following fields <img src="images/Project%20Website%20%20(1).fld/image057.png" class="img-fluid"></p></li>
+<li><p>Columns from 'pop2019-pri' should be added to pop2017-pri attribute table</p></li>
+</ol></li>
+<li><p>Create a new field named 'PER DIFF' and enter the following query that calculates the difference between the percentage of primary school children in 2017 and in 2019.</p>
+<ol type="i">
+<li><img src="images/Project%20Website%20%20(1).fld/image059.png" class="img-fluid"></li>
+</ol></li>
+</ol></li>
+<li><p>Creating choropleth maps</p>
+<ol type="a">
+<li>Perform relational join on MP14 subzone boundary layer 'MP14 subzone' and 'perDiff- 17-19' using steps 5b), joining on the subzone name as shown below. Columns from&nbsp; 'perDiff- 17-19' should be added to the 'MP14 subzone' attribute table.</li>
+</ol></li>
+</ol>
+<p><img src="images/Project%20Website%20%20(1).fld/image061.png" class="img-fluid"></p>
+<ol start="6" type="1">
+<li><div>
+<ol start="2" type="a">
+<li><p>Symbolise the 'MP14 subzone' layer using the Graduated symbology, selecting the PER DIFF field and Natural Breaks (Jenks) classification mode.</p>
+<ol type="i">
+<li><img src="images/Project%20Website%20%20(1).fld/image063.png" class="img-fluid"></li>
+</ol></li>
+</ol>
+</div></li>
+<li><p>Creating 1000 x 1000 Grid</p>
+<ol type="a">
+<li><p>Select Vector &gt; Research Tools &gt; Create Grid</p></li>
+<li><p>For Grid Type, select Hexagon</p></li>
+<li><p>For Grid Extent, select the MP14 subzone</p></li>
+<li><p>For Horizontal and Vertical spacing, input 1000</p></li>
+<li><p>Run the program</p></li>
+<li><p>Next, select Vector &gt; Geometry Tools &gt; Centroids, and select the input layer as the Grid Layer that was just created.</p></li>
+<li><p>Clip both the Grid Layer and the Centroid Layer to the boundary of MP14 Subzone.</p></li>
+<li><p>Save the Clipped Grid Layer as 'Hex Singapore' and the Clipped Centroid Layer as 'Centroids Singapore'<br>
+<br>
+</p></li>
+</ol></li>
+<li><p>Calculating the Distance Matrix across the entire Singapore</p>
+<ol type="a">
+<li><p>Using the QNEAT3 plugin, select 'OD Matrix from Layers as Table'</p></li>
+<li><p>For the Network Layer, import the 'roads_free_1.shp' from OSM, and clip it to the boundary of MP14.</p></li>
+<li><p>Use this as the Network Layer.</p></li>
+<li><p>For the From Point layer, select the centroids obtained from the above.</p></li>
+<li><p>For To-Point Layer, select from 'priAll17' the drop-down list. For Unique Point ID Field, select fid from the drop-down list. For Optimization Criterion, select Shortest Path (distance optimization) from the drop-down list. For Entry Cost calculation method, select Ellipsoidal from the drop-down list. For Direction field, select oneway from the drop-down list. For Value for forward direction, type F. For Value for backward direction, type T. For Value for both direction, type B.</p></li>
+<li><p>Run the algorithm.</p></li>
+<li><p>Next, we will use the SQL tool of QGIS to select destination points with the shortest distance.</p></li>
+<li><p>At the Search pane of Processing Toolbox, type SQL.</p></li>
+<li><p>SQL function appears on the list.</p></li>
+<li><p>Double-click on Execute SQL of Vector general.</p></li>
+<li><p>Execute SQL dialog window appears.</p></li>
+<li><p>For Additional input datasources, select on the button at the right end.</p></li>
+<li><p>Click on the checkbox Output OD Matrix.</p></li>
+<li><p>Click on OK button.</p></li>
+<li><p>At SQL query panel, type the following SQL</p></li>
+<li><p>For Geometry type, select No Geometry from the drop-down list.</p></li>
+<li><p>Notice that a temporary table called SQL Output is added onto Layers panel. It consists of four fields. The values in shortest_distance field are shortest distance between demand points and its nearest primary schools.</p></li>
+<li><p>Save this layer as 'acc-pri17' in the geopackage</p></li>
+<li><p>Repeat the above steps for priAll19 and save the layer as 'acc-pri19' in the geopackage.<br>
+<br>
+</p></li>
+</ol></li>
+<li><p>Obtaining the Hexagons in Singapore</p>
+<ol type="a">
+<li><p>Using the hexagon layer obtained above, perform a join on the fid of acc-pri17.<br>
+<br>
+<img src="images/Project%20Website%20%20(1).fld/image065.png" class="img-fluid"><br>
+<br>
+</p></li>
+<li><p>Likewise, perform a join on the fid of acc-pri19.</p></li>
+<li><p>Under symbology, select Graduated. For value, click on the summation sign at the right and input the following formula.<br>
+<img src="images/Project%20Website%20%20(1).fld/image067.png" class="img-fluid"></p></li>
+<li><p>For color ramp, select Civids and classify via equal count.</p></li>
+</ol></li>
+</ol>
+<p><br>
+</p>
+<p><br>
+<br>
+</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

@@ -6,9 +6,7 @@
 
 2.  Distance Matrix Analysis using Vector-based GIS
 
-3.  Chloropleth Map
-
-### 1. Analytical Hexagons
+### Analytical Hexagons
 
 ![](images/Grids.webp){fig-align="center" width="634"}
 
@@ -20,7 +18,7 @@ Several areas had schools **added to them,** such as parts of **Punggol**, **Chu
 
 Overall, the average distance to a primary school in Singapore remained relatively constant.
 
-### 2. Distance Matrix Analysis using Vector-based GIS
+### Distance Matrix Analysis using Vector-based GIS
 
 ![Primary Schools affected by 2019 Merger](images/Buffer%20Primary%20Schools%20Affected%20by%202019%20Merger%201.png){alt="Primary Schools affected by 2019 Merger" fig-align="center"}
 
@@ -40,6 +38,8 @@ A 2km buffer was constructed around the 14 schools and a distance matrix compute
 
 Extracting the **residential centroids** that fall within the **2km buffers** around merged primary schools, the **difference** in minimum distance between 2017 and 2019 school location was derived and symbolised.
 
+\
+
 Mergers for Bendemeer and Cedar primary schools saw the largest change in minimum distance as merge sites are further from old sites compared to other schools. Homes labelled red are 2.4km further from new sites while those labelled green are 1.8km closer.
 
 Symbolised green vector points indicate a **decrease in minimum distance** from homes to newly merged schools. The merger led to homes becoming closer to the new school site. Symbolised red vector points indicate an **increase in minimum distance** from homes to newly merged schools. The merger led to homes becoming further from the new school site. Symbolised pale yellow vector points indicate little change in minimum distance particularly for Jun Yuan and Casuarina primary schools in the East where merged sites are relatively closer to old sites compared to other merged schools.
@@ -54,17 +54,17 @@ Zooming in on **Balestier Hill** and **Bendemeer Primary schools** for closer an
 
 </div>
 
-### 3. Chloropleth Map
-
 ![](images/Percentage%20Change%20in%20Population%20of%20Primary%20Schools.png){fig-align="center" width="562"}
 
 To study the demand for primary schools, the population of primary school going children by subzone was analysed. The choropleth map shows the percentage change of population of primary school going children from 2017 to 2019. **Negative** values indicate an **increase** in the percentage of primary school population. There is a noticeable increase of **4 to 10%** in Seletar, Tampines North, Bukit Batok west (extension) and Tanglin subzones; while a slight increase of **4% to 0.8%** is seen in North East region of Punggol, Mount Pleasant and Moulmein subzones in Novena planning area as well as in southern regions such as Margret drive and Redhill. **Positive** values indicate a **decrease** in the percentage of primary school going population. There is a noticeable decrease of **2 to 7%** in Kent Ridge and central regions such as Newton, and a slight decrease of **0.3 to 2%** labelled in light blue constituting a large majority of subzones.
+
+\
 
 Population choropleth map **confirms falling birth rates**, as more subzones are seeing a decrease in primary school population though **newer estates** - Punggol, Sengkang, Seletar and Tampines North - see an increase. Population trends and demand should be considered when **planning future school mergers** since there will not be a need for new primary schools to be built in maturing estates; instead new schools could better meet the needs of newer estates with younger families. 
 
 \
 
-## Conclusion and Future Work
+### Conclusion and Future Work
 
 The 2019 primary school mergers' impact on the minimum distance between residential homes and newly merged schools was minimal. The change in distance was a maximum of about 2.4km, which is a relatively small change in distance. Additionally, the overall change throughout Singapore was relatively small.\
 

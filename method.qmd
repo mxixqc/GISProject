@@ -1,0 +1,317 @@
+### Methodology
+
+#### Data Preparation for Distance Matrix 
+
+a.  Subzone boundary data can be extracted from data.gov.sg → master plan 2014 subzone boundary (<https://data.gov.sg/dataset/master-plan-2014-subzone-boundary-no-sea> )
+
+b.  Import the kml MP14_SUBZONE_NO_SEA_PL file and save it into geopackage, converting the CRS to EPSG3414/ SVY21. Rename it as \'MP14 subzone\'.
+
+#### Data Extraction for Schools from Online Sources
+
+####  2019 data
+
+i.  Location of schools extracted from data.gov.sg (<https://data.gov.sg/dataset/school-directory-and-information> ) → general-information-of-schools.csv
+
+ii. Since general-information-of-schools.csv does not contain latitude or longitude data/ coordinate data, geocoding using the plugin MMQGIS needs to be done. Before geocoding, open the csv in excel and add 2 more columns \'City\' and \'Singapore\' and fill both columns with \'Singapore\'. Save changes and rename the csv to \'schools_info.csv\'.
+
+iii. Download the MMQGIS plugin on QGIS and navigate to Geocode \> Geocode CSV with web service. Select schools_info.csv for input CSV file, and OpenStreetMap/ Nominatim for geocoding web service. For output file name create a new folder \'found\' to save geocoded shapefile. For the Not Found output list, name it not-found.csv.
+
+     ![](images/Project%20Website%20%20(1).fld/image001.png)
+
+iv. The resulting \'found.shp\' should contain only 324 records once loaded onto the layers panel. Open the attribute table and select the primary schools using these queries using the Select by expression icon
+
+    ![](images/Project%20Website%20%20(1).fld/image003.png)
+
+v.  Save the selected features as csv (Export \> Save selected features as). Name it \'priAll19-173\'
+
+vi. Open the not-found.csv file, copy over the details of the following primary schools into \'priAll19-173.csv\'. As for the column \'latlong\', for each of the following primary schools, retrieve the latlong coordinates from google maps.\
+    ![](images/Project%20Website%20%20(1).fld/image010.jpg)
+
+vii. Separate the latlong data into 2 columns \'lat\' and \'long\'. Select the \'latlong\' column, Data \> text to columns \> choose the delimiter as comma. 2 new columns \'lat\' and \'long\' should be created. Save this csv named \'priAll19.csv\'.
+
+viii. Import  \'priAll19.csv\' into QGIS (layer \> add layer \> add delimited text layer ) and input the following detail\
+
+      ![](images/Project%20Website%20%20(1).fld/image011.png)\
+
+```{=html}
+<!-- -->
+```
+ix. Save the layer priAll19 into geopackage format with the CRS EPSG3414![](images/Project%20Website%20%20(1).fld/image014.jpg)
+
+#### 2017 data
+
+i.  Download 2017 primary school locations from (<https://github.com/hxchua/datadoubleconfirm/blob/master/datasets/primaryschoolsg.csv> )
+
+ii. It should contain the 7 schools that were merged into other schools in 2019
+
+    ![](images/Project%20Website%20%20(1).fld/image016.jpg)
+
+```{=html}
+<!-- -->
+```
+iii. Save it into geopackage with EPSG3414 projection, and named \'priAll17\'.
+
+#### Data extraction for residential buildings from online sources 
+
+a.  Download the shapefile from Geofabrik (<https://download.geofabrik.de/asia/malaysia-singapore-brunei.html> ) → malaysia-singapore-brunei-latest-free.shp.zip
+
+b.  import the file \'gis_osm_buildings_a\_free_1.shp\' into QGIS
+
+c.  Clip the buildings that fall within singapore (vector \> geoprocessing tools \> clip). For input layer, select \'gis_osm_buildings_a\_free_1\' layer. For overlay layer, select \'MP14 subzone\'.
+
+d.  A new temporary layer \'Clipped\' should be added to layers panel. Open the attribute table, and select the residential type buildings. Save this layer into geopackage as \'Residential-buildings\'.
+
+    ![](images/Project%20Website%20%20(1).fld/image018.jpg)
+
+e.  To get residential building centroids[\[1\]](#_msocom_1) , use the plugin RealCentroid. For polygon layer, select \'Residential-buildings\'. For output point on surface layer, create a folder and name the output file \'residential-centroids\'. Save the newly created layer to geopackage named \'Resid-centroid\'.
+
+####  Distance matrix for all merged schools
+
+a.  From the priAll17 layer, select 14 schools affected by the 2019 merger (​​<https://www.moe.gov.sg/-/media/files/news/press/2017/annex-a---named-of-pri-and-sec-schools-merging-in-2019.pdf> ). Save these selected features to geopackage named \'mergedPri\'.
+
+    i.  Save unmerged17: Select the 2017 schools from mergedPri and save them into a separate layer named unmerged17
+
+![](images/Project%20Website%20%20(1).fld/image019.png){width="295"}
+
+4.  <div>
+
+    a.  <div>
+
+        ii. Save merged19: Select the 2019 schools from mergedPri and save them into a separate layer named merged19
+
+        </div>
+
+    </div>
+
+![](images/Project%20Website%20%20(1).fld/image021.png){width="234"}
+
+4.  <div>
+
+    b.  Create 2km dissolved buffers around the 14 affected schools (vector \> geoprocessing tools \> buffer) using the mergedPri layer. Enter the fields below, ensuring the \'Dissolve result\' checkbox is checked.
+
+    </div>
+
+![](images/Project%20Website%20%20(1).fld/image023.png){width="467"}
+
+4.  <div>
+
+    c.  Select the centroids that fall within the 2km buffers (vector \> research tools \> select by location) according to the screenshot below and save selected features as \'ALL-study area\'.
+
+    </div>
+
+![](images/Project%20Website%20%20(1).fld/image025.png)
+
+4.  <div>
+
+    d.  To obtain distance matrix for unmerged17 layer, (vector \> analysis tools \> distance matrix). For input point layer, select the ALL-study area layer. For target point layer, select unmerged17 layer. For output matrix type, select summary distance matrix. A temporary layer \'Distance Matrix\' will be created, rename this to \'Distance Matrix17\'.
+
+    </div>
+
+![](images/Project%20Website%20%20(1).fld/image027.png)
+
+4.  <div>
+
+    e.  Repeat step 4d) with the merged19 layer. A temporary layer \'Distance Matrix\' will be created, rename this to \'Distance Matrix19\'
+
+    </div>
+
+![](images/Project%20Website%20%20(1).fld/image029.png)
+
+4.  <div>
+
+    f.  Perform a relational join on \'Distance Matrix19\', joining \'Distance Matrix17\' into \'Distance Matrix19\' on the fid as Join field and Target field.
+
+    g.  Next, on \'Distance Matrix19\' create a new field named MIN DIFF with the following query to get the difference in minimum distance. Save this layer into geopackage named \'ALL-matrix diff\'.
+
+    </div>
+
+![](images/Project%20Website%20%20(1).fld/image031.png)
+
+4.  <div>
+
+    h.  To symbolise \'ALL-matrix diff\', (properties \> symbology) select the graduated symbology and MIN DIFF as value field. Select Natural Breaks for symbology mode.
+
+    </div>
+
+![](images/Project%20Website%20%20(1).fld/image033.png)
+
+5.  Distance matrix for bendemeer and balestier hill primary school
+
+    a.  Select bendemeer and balestier hill primary school  from \'mergedPri\' layer and create 2km dissolved buffers around the 2 schools (vector \> geoprocessing tools \> buffer). Enter the fields below, ensuring the \'Selected feature only\' and \'Dissolve result\' checkboxes are checked.
+
+![](images/Project%20Website%20%20(1).fld/image035.png)
+
+5.  <div>
+
+    b.  Select the centroids that fall within the 2km buffers using step 4c)  and save selected features as \'BB-study area\'.
+
+    c.  Repeat steps 4d) to 4g) to obtain the MIN DIFF and name the final layer \'BB-matrix diff\'.
+
+    d.  Symbolise \'BB-matrix diff\' using step 4h)
+
+    </div>
+
+\
+
+Data preparation for choropleth map
+
+1.  Data extraction from online sources
+
+    a.  Population data can be extracted from singstat (<https://www.singstat.gov.sg/find-data/search-by-theme/population/geographic-distribution/latest-data> ) → [Singapore Residents by Planning Area / Subzone, Age Group, Sex and Type of Dwelling, June 2011-2020](https://www.singstat.gov.sg/-/media/files/find_data/population/statistical_tables/respopagesextod2011to2020.ashx)
+
+2.  Import the data
+
+    a.  Bring in the csv \'respopagesex2011to2020\' : layer \> add layer \> add delimited text layer and select the csv to import.
+
+    b.  Ensure that \'No geometry\' option is selected
+
+![](images/Project%20Website%20%20(1).fld/image039.png)
+
+3.  Extraction of relevant data
+
+    a.  Create a new virtual layer to extract the relevant data for 2017
+
+    b.  Layer \> create layer \> new virtual layer
+
+    c.  Name the layer \'pop2017-pri\' and import the population csv \'respopagesex2011to2020\' from the layers panel. Then enter the following SQL statement to extract the population of primary school children and total population in 2017
+
+        i.  ![](images/Project%20Website%20%20(1).fld/image039.png)
+
+    d.  Click Add and a virtual table should be created on the layers panel named \'pop2017-pri\'. Save this layer into geopackage format.
+
+    e.   Repeat steps 3a) to 3d) for 2019.
+
+        i.  Using this SQL query instead:
+
+        ii. ![](images/Project%20Website%20%20(1).fld/image041.png)
+
+    f.  Current layers should be \'pop2017-pri\' and \'pop2019-pri\' saved into geopackage.
+
+4.  Data manipulation - calculating percentage of primary school children
+
+    a.  Open the data table for pop2017-pri layer.
+
+    b.  Open the field calculator (![](images/Project%20Website%20%20(1).fld/image043.png)) and create a new field named \'SUBZONE_N\' that capitalises the subzone names. Ensure the output field type is Text(string)
+
+        i.  ![](images/Project%20Website%20%20(1).fld/image045.png)
+
+    c.  Next create another field that calculates the percentage of primary school children and ensure the output field type is Decimal Number (real).
+
+        i.  ![](images/Project%20Website%20%20(1).fld/image047.png)
+
+    d.  Next, for the newly created PER column, convert the cells with NULL values to 0. By checking the update existing field checkbox.
+
+        i.  ![](images/Project%20Website%20%20(1).fld/image049.png)
+
+    e.  Save and close the attribute table which should have the following columns
+
+        i.  ![](images/Project%20Website%20%20(1).fld/image051.png)
+
+    f.  Repeat steps 4a) to 4e) for the layer pop2019-pri
+
+5.  Data manipulation - calculating percentage difference
+
+    a.  Duplicate the layer pop2017-pri from the layers panel and rename this layer as \'perDiff- 17-19\'.
+
+    b.  Open the attribute table for \'perDiff- 17-19\' and perform a relational join on the SUBZONE_N field by navigating as follows:
+
+        i.  From properties Joins tab ![](images/Project%20Website%20%20(1).fld/image053.png) \> add new join ![](images/Project%20Website%20%20(1).fld/image055.png) \> enter the following fields ![](images/Project%20Website%20%20(1).fld/image057.png)
+
+        ii. Columns from \'pop2019-pri\' should be added to pop2017-pri attribute table
+
+    c.  Create a new field named \'PER DIFF\' and enter the following query that calculates the difference between the percentage of primary school children in 2017 and in 2019.
+
+        i.  ![](images/Project%20Website%20%20(1).fld/image059.png)
+
+6.  Creating choropleth maps
+
+    a.  Perform relational join on MP14 subzone boundary layer \'MP14 subzone\' and \'perDiff- 17-19\' using steps 5b), joining on the subzone name as shown below. Columns from  \'perDiff- 17-19\' should be added to the \'MP14 subzone\' attribute table.
+
+![](images/Project%20Website%20%20(1).fld/image061.png)
+
+6.  <div>
+
+    b.  Symbolise the \'MP14 subzone\' layer using the Graduated symbology, selecting the PER DIFF field and Natural Breaks (Jenks) classification mode.
+
+        i.  ![](images/Project%20Website%20%20(1).fld/image063.png)
+
+    </div>
+
+7.  Creating 1000 x 1000 Grid
+
+    a.  Select Vector \> Research Tools \> Create Grid
+
+    b.  For Grid Type, select Hexagon
+
+    c.  For Grid Extent, select the MP14 subzone
+
+    d.  For Horizontal and Vertical spacing, input 1000
+
+    e.  Run the program
+
+    f.  Next, select Vector \> Geometry Tools \> Centroids, and select the input layer as the Grid Layer that was just created.
+
+    g.  Clip both the Grid Layer and the Centroid Layer to the boundary of MP14 Subzone.
+
+    h.  Save the Clipped Grid Layer as \'Hex Singapore\' and the Clipped Centroid Layer as \'Centroids Singapore\'\
+        \
+
+8.  Calculating the Distance Matrix across the entire Singapore
+
+    a.  Using the QNEAT3 plugin, select \'OD Matrix from Layers as Table\'
+
+    b.  For the Network Layer, import the \'roads_free_1.shp\' from OSM, and clip it to the boundary of MP14.
+
+    c.  Use this as the Network Layer.
+
+    d.  For the From Point layer, select the centroids obtained from the above.
+
+    e.  For To-Point Layer, select from \'priAll17\' the drop-down list. For Unique Point ID Field, select fid from the drop-down list. For Optimization Criterion, select Shortest Path (distance optimization) from the drop-down list. For Entry Cost calculation method, select Ellipsoidal from the drop-down list. For Direction field, select oneway from the drop-down list. For Value for forward direction, type F. For Value for backward direction, type T. For Value for both direction, type B.
+
+    f.  Run the algorithm.
+
+    g.  Next, we will use the SQL tool of QGIS to select destination points with the shortest distance.
+
+    h.  At the Search pane of Processing Toolbox, type SQL.
+
+    i.  SQL function appears on the list.
+
+    j.  Double-click on Execute SQL of Vector general.
+
+    k.  Execute SQL dialog window appears.
+
+    l.  For Additional input datasources, select on the button at the right end.
+
+    m.  Click on the checkbox Output OD Matrix.
+
+    n.  Click on OK button.
+
+    o.  At SQL query panel, type the following SQL
+
+    p.  For Geometry type, select No Geometry from the drop-down list.
+
+    q.  Notice that a temporary table called SQL Output is added onto Layers panel. It consists of four fields. The values in shortest_distance field are shortest distance between demand points and its nearest primary schools.
+
+    r.  Save this layer as \'acc-pri17\' in the geopackage
+
+    s.  Repeat the above steps for priAll19 and save the layer as \'acc-pri19\' in the geopackage.\
+        \
+
+9.  Obtaining the Hexagons in Singapore
+
+    a.  Using the hexagon layer obtained above, perform a join on the fid of acc-pri17.\
+        \
+        ![](images/Project%20Website%20%20(1).fld/image065.png)\
+        \
+
+    b.  Likewise, perform a join on the fid of acc-pri19.
+
+    c.  Under symbology, select Graduated. For value, click on the summation sign at the right and input the following formula.\
+        ![](images/Project%20Website%20%20(1).fld/image067.png)
+
+    d.  For color ramp, select Civids and classify via equal count.
+
+\
+
+\
+\
