@@ -1,0 +1,11 @@
+# GIS Report - Impact of mergers on equity of distance
+
+## Methods
+
+1.  Analytical Hexagons
+
+2.  Distance Matrix Analysis using Vector-based GIS
+
+### Analytical Hexagons
+
+### Distance Matrix Analysis using Vector-based GIS

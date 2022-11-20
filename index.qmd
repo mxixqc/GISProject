@@ -1,5 +1,5 @@
 ---
-title: "G1T4: Travel So Long for What!"
+title: "G1T4: Merger of Primary Schools in 2019"
 editor: visual
 ---
 
@@ -41,6 +41,4 @@ Here are some information that we found interesting!
 
 [18 primary and secondary schools to undergo mergers](https://www.channelnewsasia.com/singapore/moe-schools-merging-new-town-tanglin-telok-kurau-201401)
 
-### Proposal
-
-Come take a look at our [proposal](./proposal.html)!
+### 

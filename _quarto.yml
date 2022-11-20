@@ -7,14 +7,14 @@ website:
     left: 
       - href: index.qmd
         text: Home
-      - href: proposal.qmd
-        text: Proposal
       - href: overview.qmd
         text: Overview
       - href: poster.qmd
         text: Poster
-      - href: results.qmd
-        text: Results
+      - href: report.qmd
+        text: GIS Report
+      - href: about.qmd
+        text: About
     right:
       - href: index.qmd
         text: Home
