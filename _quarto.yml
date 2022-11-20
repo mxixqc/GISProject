@@ -13,11 +13,9 @@ website:
         text: Poster
       - href: report.qmd
         text: GIS Report
+    right:
       - href: about.qmd
         text: About
-    right:
-      - href: index.qmd
-        text: Home
 
 format:
   html:
